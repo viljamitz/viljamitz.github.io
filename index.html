@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kielitorni - Raamatun alkukielten oppimissovellus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="welcome-window">
+    <h1>Tervetuloa Kielitorniin!</h1>
+    <button id="start-lesson-btn">Aloita oppitunti</button>
+  </div>
+
+  <div id="lesson-window" style="display: none;">
+    <header>
+      <h1>Kielitorni - Raamatun alkukielten oppimissovellus</h1>
+      <img src="assets/mascot.png" alt="Mascot Image">
+    </header>
+
+    <main>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+
+      <section id="quiz">
+        <h2>Harjoittele yleisimpiä heprean sanoja</h2>
+        <div id="question-container">
+          <p id="question">Mikä on tämän heprean sanan suomenkielinen käännös?</p>
+        </div>
+        <div id="options-container">
+          <!-- Options will be dynamically added here -->
+        </div>
+        <p id="feedback" class="feedback"></p>
+      </section>
+
+      <section id="translation" style="display: none;">
+        <h2>Käännä heprean sanat suomeksi</h2>
+        <p id="translation-question">Heprean sana tähän</p>
+        <input type="text" id="translation-input">
+        <button id="submit-answer" class="option">Vastaa</button>
+        <p id="translation-feedback" class="feedback"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Your Name</p>
+    </footer>
+
+    <div id="lesson-completed-message" style="display: none;">
+      <p id="lesson-completed-text">Lesson completed!</p>
+      <button id="restart-lesson-btn">Start a new lesson</button>
+    </div>
+  </div>
+
+  <audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+  <audio id="incorrect-sound" src="incorrect.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

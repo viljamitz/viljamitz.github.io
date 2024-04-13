@@ -1,0 +1,144 @@
+/* Keyframes for flash effect */
+@keyframes flash {
+  from, to { background-color: transparent; }
+  50% { background-color: var(--flash-color); }
+}
+
+/* Body flash effect on answer submission */
+body.correct-flash, body.incorrect-flash {
+  animation: flash 1s ease;
+}
+
+body.correct-flash {
+  --flash-color: #ccffcc; /* light green for correct answers */
+}
+
+body.incorrect-flash {
+  --flash-color: #ffcccc; /* light red for incorrect answers */
+}
+
+/* Keyframes for popping animation */
+@keyframes pop {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Applying animation to feedback based on correctness */
+.feedback {
+  animation: pop 0.5s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Specific styles for correct and incorrect feedback */
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+/* Your existing styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+#quiz, #translation {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#question-container {
+  margin-bottom: 20px;
+}
+
+#question {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #45a049;
+}
+
+#progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#progress {
+  height: 100%;
+  width: 0%;
+  background-color: #4CAF50;
+  border-radius: 10px;
+}
+
+#welcome-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#start-lesson-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#lesson-window {
+  display: none;
+}
